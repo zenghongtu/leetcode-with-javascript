@@ -36,26 +36,28 @@ var reverseList = function (head) {
 };
 
 
-const head = createList('1->2->3->4->5');
+const head = createList([1, 2, 3, 4, 5]);
 const result = reverseList(head);
-if (JSON.stringify(result) === JSON.stringify(createList('5->4->3->2->1'))) {
+if (JSON.stringify(result) === JSON.stringify(createList([5, 4, 3, 2, 1]))) {
     console.log('测试通过');
 } else {
     console.log(result);
     console.log('测试失败');
 }
 
+
+function ListNode(val) {
+    this.val = val;
+    this.next = null;
+}
+
 // 创建链表
 function createList(input) {
-    const arr = input.split('->');
-    let i = 0, lastIdx = arr.length - 1;
-
-    function loop(i) {
-        if (i === lastIdx) {
-            return {val: +arr[lastIdx], next: null}
-        }
-        return {val: +arr[i], next: loop(++i)}
+    let head = new ListNode(input[0]);
+    let cur = head, i = 1;
+    while (i < input.length) {
+        cur.next = new ListNode(input[i++]);
+        cur = cur.next
     }
-
-    return loop(i)
+    return head
 }
