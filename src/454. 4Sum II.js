@@ -11,12 +11,15 @@
  * @return {number}
  */
 var fourSumCount = function (A, B, C, D) {
+    // 定义查找表(可以用 Map)
     const obj1 = {};
-    const obj2 = {};
     let i = 0;
+    let result = 0;
+    // 将 A和 B 中各个数字之和添加到查找表
     while (i < A.length) {
         let j = 0;
         while (j < B.length) {
+            // 把结果转换为字符串,作为key,出现次数作为 value
             obj1[A[i] + B[j] + ''] = (obj1[A[i] + B[j] + ''] || 0) + 1;
             j++
         }
@@ -26,20 +29,13 @@ var fourSumCount = function (A, B, C, D) {
     while (k < C.length) {
         let l = 0;
         while (l < D.length) {
-            obj2[C[k] + D[l] + ''] = (obj2[C[k] + D[l] + ''] || 0) + 1;
+            // 查找到当前 k 和 l 之和的对应值在 obj 中出现的次数,进行累加
+            result += obj1[-C[k] - D[l] + ''] || 0;
             l++
         }
         k++
     }
-
-    const arr = Object.keys(obj1);
-    let result = 0, len = arr.length, n = 0;
-    while (n < len) {
-        if (obj2[-arr[n] + '']) {
-            result += obj1[arr[n] + ''] * obj2[-arr[n] + '']
-        }
-        n++
-    }
+    // 最后返回结果
     return result
 };
 
