@@ -9,18 +9,25 @@
  */
 var groupAnagrams = function (strs) {
     let result;
-    const obj = {};
+    // 定义一个Map 对象 (object 也可以)
+    const map = new Map();
     let i = 0, len = strs.length;
     while (i < len) {
-        const s = strs[i].split('').sort().join('');
-        if (obj[s]) {
-            obj[s].push(strs[i])
+        // 把字符串拆成数组然后排序再合成字符串,作为键
+        const key = strs[i].split('').sort().join();
+        // 如果存在这个键
+        if (map.has(key)) {
+            // 获取这个键所对应的数组,把当前字符串添加进去
+            map.get(key).push(strs[i])
         } else {
-            obj[s] = [strs[i]]
+            // 没有这个键就创建一个,并把值初始化为一个数组
+            map.set(key, [strs[i]])
         }
         i++
     }
-    result = Object.values(obj);
+    // 把 map 中的值转化为数组
+    result = Array.from(map.values());
+    // 返回结果
     return result
 };
 
