@@ -99,7 +99,7 @@ var addTwoNumbers = function (l1, l2) {
 const l1 = createList([0]);
 const l2 = createList([0]);
 const result = addTwoNumbers(l1, l2);
-const output = createList([7, 8, 0, 7]);
+const output = createList([0]);
 
 if (JSON.stringify(result) === JSON.stringify(output)) {
   console.log('测试通过');
