@@ -47,7 +47,7 @@ const nums1 = [4, 9, 5],
     nums2 = [9, 4, 9, 8, 4];
 const result = intersect(nums1, nums2);
 if (JSON.stringify(result) === '[9,4]') {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
     console.log('测试失败');

@@ -89,7 +89,7 @@ const input = createList([1, 2, 3, 4, 5]), m = 3, n = 4;
 const result = reverseBetween(input, m, n);
 
 if (JSON.stringify(result) === JSON.stringify(createList([1, 2, 4, 3, 5]))) {
-  console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
   console.log(result);
   console.log('测试失败');

@@ -44,7 +44,7 @@ const height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
 const r = maxArea(height);
 
 if (r === 49) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(r);
     console.log('测试失败');

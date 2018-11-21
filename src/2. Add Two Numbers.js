@@ -54,7 +54,7 @@ const l1 = [2, 4, 3],
   l2 = [5, 6, 4];
 const result = addTwoNumbers(createList(l1), createList(l2));
 if (JSON.stringify(result) === JSON.stringify(createList([7, 0, 8]))) {
-  console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
   console.log(result);
 }

@@ -32,7 +32,7 @@ var containsNearbyDuplicate = function (nums, k) {
 const nums = [1, 0, 1, 1], k = 1;
 const result = containsNearbyDuplicate(nums, k);
 if (result === true) {
-  console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
   console.log(result);
 }

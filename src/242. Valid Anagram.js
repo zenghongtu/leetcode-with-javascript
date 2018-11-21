@@ -33,7 +33,7 @@ var isAnagram = function (s, t) {
 const s = "anagram", t = "nagaram";
 const result = isAnagram(s, t);
 if (result === true) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log('测试失败');
 }

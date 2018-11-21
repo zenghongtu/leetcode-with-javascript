@@ -64,7 +64,7 @@ var containsNearbyAlmostDuplicate = function (nums, k, t) {
 const nums = [1, 5, 9, 1, 5, 9], k = 2, t = 3;
 const result = containsNearbyAlmostDuplicate(nums, k, t);
 if (result === false) {
-  console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
   console.log(result);
 }

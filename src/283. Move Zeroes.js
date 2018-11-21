@@ -28,7 +28,7 @@ var moveZeroes = function (nums) {
 const nums = [0, 1];
 moveZeroes(nums);
 if (JSON.stringify(nums) === '[1,0]') {
-    console.log('测试通过')
+  console.log('\x1b[32mSuccess')
 } else {
     console.log('测试失败');
 }

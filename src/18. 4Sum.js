@@ -117,7 +117,7 @@ var fourSum = function (nums, target) {
 const nums = [-1, -5, -5, -3, 2, 5, 0, 4], target = -7;
 const result = fourSum(nums, target);
 if (JSON.stringify(result) === JSON.stringify([[-5, -5, -1, 4], [-5, -3, -1, 2]])) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
 }

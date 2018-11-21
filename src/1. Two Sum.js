@@ -29,7 +29,7 @@ const nums = [3, 2, 4], target = 6;
 const result = twoSum(nums, target);
 
 if (JSON.stringify(result) === JSON.stringify([1, 2])) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
 }

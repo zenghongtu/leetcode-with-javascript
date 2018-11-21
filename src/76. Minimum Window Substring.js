@@ -48,7 +48,7 @@ var minWindow = function (s, t) {
 const s = "ADOBECODEBANC", t = "ABC";
 const output = minWindow(s, t);
 if (output === 'BANC') {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(output);
     console.log('测试失败');

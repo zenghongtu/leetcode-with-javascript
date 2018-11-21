@@ -43,7 +43,7 @@ var wordPattern = function (pattern, str) {
 const pattern = "abba", str = "dog cat cat dog";
 const result = wordPattern(pattern, str);
 if (result === true) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log('测试失败');
 }

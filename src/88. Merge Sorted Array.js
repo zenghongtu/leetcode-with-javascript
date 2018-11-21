@@ -50,7 +50,7 @@ const nums3 = [0], m2 = 0, nums4 = [1], n2 = 1;
 merge(nums1, m, nums2, n);
 merge(nums3, m2, nums4, n2);
 if (JSON.stringify(nums1) === '[1,2,2,3,5,6]' && JSON.stringify(nums3) === '[1]') {
-    console.log('测试通过')
+  console.log('\x1b[32mSuccess')
 } else {
     console.log(nums1);
     console.log(nums3);

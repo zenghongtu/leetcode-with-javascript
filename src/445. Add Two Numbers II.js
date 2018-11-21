@@ -102,7 +102,7 @@ const result = addTwoNumbers(l1, l2);
 const output = createList([0]);
 
 if (JSON.stringify(result) === JSON.stringify(output)) {
-  console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
   console.log(result)
 }

@@ -55,7 +55,7 @@ const input = [1, 4, 3, 2, 5, 2], x = 3;
 const result = partition(createList(input), x);
 
 if (JSON.stringify(result) === JSON.stringify(createList([1, 2, 2, 4, 3, 5]))) {
-  console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
   console.log(result);
 }

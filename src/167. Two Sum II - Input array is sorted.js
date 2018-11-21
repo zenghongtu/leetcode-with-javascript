@@ -37,7 +37,7 @@ var twoSum = function (numbers, target) {
 const numbers = [2, 7, 11, 15], target = 9;
 const result = twoSum(numbers, target);
 if (JSON.stringify(result) === '[1,2]') {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
     console.log('测试失败');

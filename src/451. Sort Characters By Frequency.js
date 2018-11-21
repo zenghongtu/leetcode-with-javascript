@@ -41,7 +41,7 @@ var frequencySort = function (s) {
 const input = 'tree';
 const result = frequencySort(input);
 if (result === 'eert') {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
     console.log('测试失败');

@@ -52,7 +52,7 @@ const l1 = createList([1, 2, 4]),
   l2 = createList([1, 3, 4]);
 const result = mergeTwoLists(l1, l2);
 if (JSON.stringify(result) === JSON.stringify(createList([1, 1, 2, 3, 4, 4]))) {
-  console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
   console.log(result);
 }

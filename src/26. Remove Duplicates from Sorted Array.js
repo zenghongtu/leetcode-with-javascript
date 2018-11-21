@@ -27,7 +27,7 @@ var removeDuplicates = function (nums) {
 const nums = [1, 1, 2];
 const result = removeDuplicates(nums);
 if (result === 2) {
-    console.log('测试通过')
+  console.log('\x1b[32mSuccess')
 } else {
     console.log('测试失败');
 }

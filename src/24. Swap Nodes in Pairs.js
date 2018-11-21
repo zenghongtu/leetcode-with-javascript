@@ -53,7 +53,7 @@ var swapPairs = function (head) {
 const input = createList([1, 2, 3]);
 const result = swapPairs(input);
 if (JSON.stringify(result) === JSON.stringify(createList([2, 1, 3]))) {
-  console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
   console.log(result);
 }

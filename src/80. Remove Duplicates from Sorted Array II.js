@@ -40,7 +40,7 @@ var removeDuplicates = function (nums) {
 const nums = [1, 1, 1, 2, 2, 3];
 const result = removeDuplicates(nums);
 if (result === 5 && JSON.stringify(nums.slice(0, 5)) === '[1,1,2,2,3]') {
-    console.log('测试通过')
+  console.log('\x1b[32mSuccess')
 } else {
     console.log(result);
     console.log(nums);

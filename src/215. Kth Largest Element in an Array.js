@@ -53,7 +53,7 @@ var findKthLargest = function (nums, k) {
 const nums = [2, 1], k = 2;
 const result = findKthLargest(nums, k);
 if (result === 1) {
-    console.log('测试通过')
+  console.log('\x1b[32mSuccess')
 } else {
     console.log(result);
     console.log('测试失败');

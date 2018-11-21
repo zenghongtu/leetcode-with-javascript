@@ -42,7 +42,7 @@ const points = [[0, 0], [1, 0], [2, 0]];
 const result = numberOfBoomerangs(points);
 
 if (result === 2) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
 }

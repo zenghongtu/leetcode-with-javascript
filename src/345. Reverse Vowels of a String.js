@@ -43,7 +43,7 @@ const s = 'leetcode';
 const r = reverseVowels(s);
 
 if (r === 'leotcede') {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(r);
     console.log('测试失败');

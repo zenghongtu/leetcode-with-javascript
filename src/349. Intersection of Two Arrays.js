@@ -30,7 +30,7 @@ var intersection = function (nums1, nums2) {
 const nums1 = [1, 2, 2, 1], nums2 = [2, 2];
 const result = intersection(nums1, nums2);
 if (JSON.stringify(result) === '[2]') {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
     console.log('测试失败');

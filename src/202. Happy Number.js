@@ -38,7 +38,7 @@ var isHappy = function (n) {
 const input = 7;
 const output = isHappy(input);
 if (output === true) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log('测试失败');
 }

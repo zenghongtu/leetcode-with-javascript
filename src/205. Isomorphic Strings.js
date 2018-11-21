@@ -39,7 +39,7 @@ var isIsomorphic = function (s, t) {
 const s = "ab", t = "aa";
 const result = isIsomorphic(s, t);
 if (result === true) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log('测试失败');
 }

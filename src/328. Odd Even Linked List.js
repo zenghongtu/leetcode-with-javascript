@@ -41,7 +41,7 @@ var oddEvenList = function (head) {
 const input = [1, 2, 3, 4, 5];
 const result = oddEvenList(createList(input));
 if (JSON.stringify(result) === JSON.stringify(createList([1, 3, 5, 2, 4]))) {
-  console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
   console.log(result);
 }

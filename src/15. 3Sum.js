@@ -114,7 +114,7 @@ const nums = [-1, 0, 1, 2, -1, -4];
 const result = threeSum(nums);
 
 if (JSON.stringify(result) === JSON.stringify([[-1, 0, 1], [-1, -1, 2]])) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
 }

@@ -50,7 +50,7 @@ const s1 = "abab", p1 = "ab";
 const r0 = findAnagrams(s0, p0);
 const r1 = findAnagrams(s1, p1);
 if (JSON.stringify(r0) === '[3,4,6]' && JSON.stringify(r1) === '[0,1,2]') {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(r0);
     // console.log(r1);

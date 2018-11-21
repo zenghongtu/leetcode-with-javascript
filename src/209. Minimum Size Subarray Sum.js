@@ -50,7 +50,7 @@ var minSubArrayLen = function (s, nums) {
 const s = 7, nums = [2, 3, 1, 2, 4, 3];
 const result = minSubArrayLen(s, nums);
 if (result === 2) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
     console.log('测试失败');

@@ -39,7 +39,7 @@ var lengthOfLongestSubstring = function (s) {
 const s = "pwwkew";
 const result = lengthOfLongestSubstring(s);
 if (result === 3) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
     console.log('测试失败');

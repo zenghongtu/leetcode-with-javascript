@@ -29,7 +29,7 @@ var reverseString = function (s) {
 const s = 'hello';
 const r = reverseString(s);
 if (r === 'olleh') {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(r);
     console.log('测试失败');

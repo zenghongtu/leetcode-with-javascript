@@ -46,7 +46,7 @@ const A = [1, 2],
 
 const result = fourSumCount(A, B, C, D);
 if (result === 2) {
-    console.log('测试通过');
+  console.log('\x1b[32mSuccess');
 } else {
     console.log(result);
 }
