@@ -15,6 +15,7 @@
  * @param {number} k
  * @return {ListNode}
  */
+  // todo 先计算链表长度,再对链表节点遍历,减少遍历节点数从而优化速度
 var rotateRight = function (head, k) {
   // 链表为空和 k 为0直接返回
   if (!head || k === 0) return head;
