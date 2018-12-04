@@ -34,14 +34,56 @@
  * @constructor
  * @param {NestedInteger[]} nestedList
  */
-var NestedIterator = function (nestedList) {
-  this.list = flatten(nestedList);
-  this.idx = -1
-};
+// var NestedIterator = function (nestedList) {
+//   this.list = flatten(nestedList);
+//   this.idx = -1
+// };
+//
+// function flatten(nestedList) {
+//   return nestedList.reduce((prev, cur) => cur.isInteger() ? prev.concat(cur.getInteger()) : prev.concat(flatten(cur.getList())), []);
+// }
+//
+//
+// /**
+//  * @this NestedIterator
+//  * @returns {boolean}
+//  */
+// NestedIterator.prototype.hasNext = function () {
+//   return this.list[++this.idx] !== undefined
+// };
+//
+// /**
+//  * @this NestedIterator
+//  * @returns {integer}
+//  */
+// NestedIterator.prototype.next = function () {
+//   return this.list[this.idx]
+// };
+//
+// /**
+//  * Your NestedIterator will be called like this:
+//  * var i = new NestedIterator(nestedList), a = [];
+//  * while (i.hasNext()) a.push(i.next());
+//  */
 
-function flatten(nestedList) {
-  return nestedList.reduce((prev, cur) => cur.isInteger() ? prev.concat(cur.getInteger()) : prev.concat(flatten(cur.getList())), []);
+function* listGenerator(nestedList) {
+  for (let el of nestedList) {
+    if (el.isInteger()) {
+      yield el.getInteger();
+    } else {
+      yield* listGenerator(el.getList());
+    }
+  }
 }
+
+/**
+ * @constructor
+ * @param {NestedInteger[]} nestedList
+ */
+var NestedIterator = function (nestedList) {
+  this._gen = listGenerator(nestedList);
+  this._val = this._gen.next();
+};
 
 
 /**
@@ -49,7 +91,7 @@ function flatten(nestedList) {
  * @returns {boolean}
  */
 NestedIterator.prototype.hasNext = function () {
-  return this.list[++this.idx] !== undefined
+  return !this._val.done;
 };
 
 /**
@@ -57,7 +99,9 @@ NestedIterator.prototype.hasNext = function () {
  * @returns {integer}
  */
 NestedIterator.prototype.next = function () {
-  return this.list[this.idx]
+  var num = this._val.value;
+  this._val = this._gen.next();
+  return num;
 };
 
 /**
