@@ -28,3 +28,15 @@ var climbStairs = function (n) {
   // 返回结果
   return compute(n, memo)
 };
+
+
+// 动态规划
+climbStairs = function (n) {
+  const memo = {};
+  memo[0] = 1;
+  memo[1] = 1;
+  for (let i = 2; i <= n; i++) {
+    memo[i] = memo[i - 1] + memo[i - 2]
+  }
+  return memo[n];
+};
