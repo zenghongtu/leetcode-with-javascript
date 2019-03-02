@@ -35,6 +35,20 @@ var reverseList = function (head) {
     return pre
 };
 
+// 进一步简化
+/*
+var reverseList = function(head) {
+    let prev = null, cur = head;
+    
+    while(cur){
+        const next = cur.next;
+        [cur.next,prev,cur] = [prev,cur,next]
+    }
+    return prev;
+    
+};
+ */
+
 
 const head = createList([1, 2, 3, 4, 5]);
 const result = reverseList(head);
@@ -61,3 +75,5 @@ function createList(input) {
     }
     return head
 }
+
+
