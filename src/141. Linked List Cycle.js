@@ -5,7 +5,7 @@ https://leetcode.com/problems/linked-list-cycle/
 思路：
  1. 硬做 .5s
  2. set 判重
- 3. 快慢指针
+ 3. 快慢指针（快指针每次动2步，慢指针每次动1步）
 */
 
 /**
