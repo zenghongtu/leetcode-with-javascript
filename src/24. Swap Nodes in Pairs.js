@@ -50,6 +50,20 @@ var swapPairs = function (head) {
 //   return head
 // };
 
+
+// 优化
+// var swapPairs = function(head) {
+//   let pre=new ListNode(null);
+//   pre.next=head;
+//   let result = pre;
+//   while(pre.next && pre.next.next){
+//     const a = pre.next,b = pre.next.next;
+//     [pre.next,b.next,a.next] = [a.next,a,b.next]
+//     pre = a
+//   }
+//   return result.next;
+// };
+
 const input = createList([1, 2, 3]);
 const result = swapPairs(input);
 if (JSON.stringify(result) === JSON.stringify(createList([2, 1, 3]))) {
