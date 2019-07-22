@@ -18,24 +18,20 @@ var sumNumbers = function(root) {
   if (!root) {
     return 0;
   }
-  const result = [];
-  const trave = (node, list = []) => {
-    list.push(node.val);
-    if (!node.left && !node.right) {
-      result.push(list);
-      return;
-    }
 
-    if (node.left) {
-      trave(node.left, [...list]);
-    }
-    if (node.right) {
-      trave(node.right, [...list]);
+  const dfs = (curSum, pNum, node) => {
+    if (!node.left && !node.right) {
+      return curSum + pNum * 10 + node.val;
+    } else {
+      pNum = pNum * 10 + node.val;
+      if (node.left) {
+        curSum = dfs(curSum, pNum, node.left);
+      }
+      if (node.right) {
+        curSum = dfs(curSum, pNum, node.right);
+      }
+      return curSum;
     }
   };
-  trave(root);
-
-  return result.reduce((a, b) => {
-    return +b.reduce((_a, _b) => _a.toString() + _b.toString()) + a;
-  }, 0);
+  return dfs(0, 0, root);
 };
