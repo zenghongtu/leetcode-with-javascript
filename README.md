@@ -1,7 +1,8 @@
 # LeetCode-with-JavaScript
 
-拒绝无脑刷题，掌握其套路，从而见招拆招。
+并不需要无脑刷题，掌握经典的题型，以不变应万变。
 
+以下题目精选自 [liuyubobobo/Play-with-Algorithms](https://github.com/liuyubobobo/Play-with-Algorithms)
 
 ## 数组
 ### 常见问题：
@@ -54,9 +55,9 @@
 - [149. Max Points on a Line]
 
 ### 滑动窗口 + 查找表题目
-- [219. Contains Duplicate II][]
-- [217. Contains Duplicate][]
-- [220. Contains Duplicate III][]
+- [219. Contains Duplicate II]
+- [217. Contains Duplicate]
+- [220. Contains Duplicate III]
 
 
 
@@ -117,7 +118,9 @@
 - [126. Word Ladder II]
 
 ### 优先队列
+
 优先队列的底层实现是堆
+
 - [347. Top K Frequent Elements]
 - [23. Merge k Sorted Lists]
 
@@ -145,3 +148,4 @@
 - [108. Convert Sorted Array to Binary Search Tree]
 - [230. Kth Smallest Element in a BST]
 - [236. Lowest Common Ancestor of a Binary Tree]
+
