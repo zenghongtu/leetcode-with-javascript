@@ -31,4 +31,17 @@ var isValid = function (s) {
 
   return stack.length === 0;
 };
+
+// 复杂度较高，思路不错。
+var isValid0 = function (s) {
+  let len = 0;
+
+  while (len !== s.length) {
+    len = s.length;
+    // 不断剔除完整的
+    s = s.replace(/\{\}/g, '').replace(/\(\)/g, '').replace(/\[\]/g, '');
+  }
+
+  return s.length === 0;
+};
 // @lc code=end
