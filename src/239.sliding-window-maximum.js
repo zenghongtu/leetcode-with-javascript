@@ -44,4 +44,31 @@ var maxSlidingWindow = function (nums, k) {
 
   return res;
 };
+
+// 简单的方法
+var maxSlidingWindow1 = function (nums, k) {
+  if (nums.length < 1) return [];
+
+  // 存放 index
+  const sWin = [];
+  const res = [];
+
+  let i = 0;
+
+  while (i < nums.length) {
+    if (i >= k) {
+      sWin.shift();
+    }
+
+    sWin.push(nums[i]);
+
+    if (i >= k - 1) {
+      res.push(Math.max(...sWin));
+    }
+
+    i++;
+  }
+
+  return res;
+};
 // @lc code=end
