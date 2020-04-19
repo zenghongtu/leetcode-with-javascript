@@ -44,4 +44,26 @@ var isValidBST = function (root) {
 
   return isValid(root);
 };
+
+// 递归
+var isValidBST1 = function (root) {
+  if (!root) {
+    return true;
+  }
+
+  // 递归比对左右节点大小
+  const isValid = (node, min, max) => {
+    if (!node) return true;
+
+    if (node.val <= min) return false;
+    if (node.val >= max) return false;
+
+    return (
+      isValid(node.right, node.val, max) && isValid(node.left, min, node.val)
+    );
+  };
+
+  return isValid(root, -Infinity, Infinity);
+};
+
 // @lc code=end
