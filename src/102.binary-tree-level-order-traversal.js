@@ -17,6 +17,7 @@
  * @return {number[][]}
  */
 var levelOrder = function (root) {
+  // BFS
   if (!root) {
     return [];
   }
@@ -51,6 +52,27 @@ var levelOrder = function (root) {
 
     ret.push(_ret);
   }
+
+  return ret;
+};
+
+var levelOrder = function (root) {
+  // DFS
+  if (!root) {
+    return [];
+  }
+
+  const ret = [];
+
+  const recursive = (node, level) => {
+    node.left && recursive(node.left, level + 1);
+
+    node.right && recursive(node.right, level + 1);
+
+    ret[level] ? ret[level].push(node.val) : (ret[level] = [node.val]);
+  };
+
+  recursive(root, 0);
 
   return ret;
 };
