@@ -10,31 +10,23 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function (s) {
-  const freq = {};
+  let map = new Map(),
+    max = 0;
 
-  let leftIdx = 0,
-    rightIdx = 0,
-    maxLen = 0,
-    len = s.length;
-
-  // 滑动窗口
-  for (; leftIdx < len; leftIdx++) {
-    // 如果之前不存在该值，往右移
-    while (rightIdx < len && !freq[s[rightIdx]]) {
-      freq[s[rightIdx]] = 1;
-
-      rightIdx++;
+  // i 无重复子串开始下标，j 为当前遍历下标
+  for (let i = 0, j = 0; j < s.length; j++) {
+    if (map.has(s[j])) {
+      // 如果出现重复，就取 上一次重复位置+1 和 当前 i 下标中最大值（即最右边位置下标）
+      i = Math.max(map.get(s[j]) + 1, i);
     }
 
-    // 记录此时最大长度
-    maxLen = Math.max(maxLen, rightIdx - leftIdx);
+    // 取当前最大，和j-i（距离）+1
+    max = Math.max(max, j - i + 1);
 
-    if (freq[s[leftIdx]]) {
-      // 下一个循环会把当前值去掉，所以减一
-      freq[s[leftIdx]]--;
-    }
+    // 更新当前对应字符的下标
+    map.set(s[j], j);
   }
 
-  return maxLen;
+  return max;
 };
 // @lc code=end
